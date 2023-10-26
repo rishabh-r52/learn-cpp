@@ -33,6 +33,13 @@ int main(){
         temp = arr[0];
     }
     
+    // int temp=0;
+    // int last=arr[n-1];
+    // for(int i=n; i>=1; i--){
+    //     arr[i] = arr[i-1];
+    // }
+    // arr[0] = last;
+
     print_array(&arr[0], n);
     return 0;
 }
