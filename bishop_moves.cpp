@@ -4,9 +4,8 @@ using namespace std;
 int main()
 {
     int init_A = 3, init_B = 4, start = 1, end = 8;
-    int moves = 0;
     int A = init_A, B = init_B;
-    int count = 0, count_NE = 0, count_NW = 0, count_SE = 0, count_SW = 0;
+    int moves = 0;
 
     while (A < end && B < end)
     {
@@ -14,7 +13,7 @@ int main()
             A++;
         if (B < end)
             B++;
-        count_SE++;
+        moves++;
     }
 
     A = init_A, B = init_B;
@@ -24,7 +23,7 @@ int main()
             A--;
         if (B > start)
             B--;
-        count_NW++;
+        moves++;
     }
 
     A = init_A, B = init_B;
@@ -34,7 +33,7 @@ int main()
             A--;
         if (B < end)
             B++;
-        count_NE++;
+        moves++;
     }
 
     A = init_A, B = init_B;
@@ -44,12 +43,10 @@ int main()
             A++;
         if (B > start)
             B--;
-        count_SW++;
+        moves++;
     }
 
-    count = count_NE + count_SW + count_SE + count_NW;
-
-    cout << "Total Possible Moves: " << count << endl;
+    cout << "Total Possible Moves: " << moves << endl;
 
     return 0;
 }
